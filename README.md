@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# dotting.cloud
 
-## Getting Started
+Static website for Dotting - remote broadcast post-production infrastructure.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Plain HTML, CSS, vanilla JavaScript. No frameworks, no Node.js, no build step.
+
+- 7 HTML pages
+- 3 languages (IT, EN, ES) with runtime switching
+- Tailwind CSS (pre-built, no CDN)
+- GDPR-compliant cookie consent (Italian DPA requirements)
+
+## Deploy
+
+Point Nginx (or any web server) at this directory:
+
+```nginx
+server {
+    listen 80;
+    server_name dotting.cloud;
+    root /path/to/dotting-website;
+    index index.html;
+
+    location / {
+        try_files $uri $uri.html $uri/ =404;
+    }
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or open `index.html` directly in a browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `index.html` - Homepage with carousel
+- `about.html` - Company info
+- `remote-infrastructure.html` - Remote post-production service
+- `ai-integration.html` - Chat2Editing AI service
+- `custom-software.html` - Custom tools gallery
+- `contact.html` - Contact
+- `privacy.html` - Privacy policy
