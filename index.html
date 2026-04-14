@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dotting - Post-Production</title>
+  <meta name="description" content="Dotting - Remote Post-Production Infrastructure, AI Integration, Custom Broadcast Software">
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <link rel="stylesheet" href="css/tailwind.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased bg-black text-white overflow-hidden">
+
+  <!-- Logo -->
+  <a href="index.html" class="fixed top-7 left-4 md:top-6 md:left-6 z-50">
+    <div class="flex items-center gap-3 md:bg-white/5 md:backdrop-blur-xl md:rounded-full md:px-4 md:py-2 md:border md:border-white/10 md:shadow-2xl md:hover:bg-white/10 transition-all duration-300">
+      <img src="images/logo.png" alt="Dotting Logo" width="24" height="24" class="w-6 h-6 object-contain">
+      <span class="text-white font-bold text-lg md:text-xl tracking-wider hidden md:inline">DOTTING</span>
+    </div>
+  </a>
+
+  <!-- Desktop Navigation -->
+  <nav class="hidden md:block fixed top-4 right-4 z-50">
+    <div class="flex items-center gap-1 bg-white/5 backdrop-blur-xl rounded-full p-1.5 border border-white/10 shadow-2xl">
+      <a href="index.html" data-nav="/" class="px-4 py-2 rounded-full transition-all duration-300 text-white/80 hover:bg-white/10 hover:text-white">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      </a>
+      <button id="services-btn" class="px-4 py-2 rounded-full text-white/80 hover:bg-white/10 hover:text-white transition-all duration-300">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <a href="about.html" data-nav="/about" class="px-4 py-2 rounded-full transition-all duration-300 text-white/80 hover:bg-white/10 hover:text-white">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </a>
+      <a href="contact.html" data-nav="/contact" class="px-4 py-2 rounded-full transition-all duration-300 text-white/80 hover:bg-white/10 hover:text-white">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </a>
+      <div class="relative lang-wrapper">
+        <button class="lang-toggle lang-current px-3 py-2 rounded-full bg-white/10 text-white/90 hover:bg-white/20 transition-all duration-300 text-xs font-bold tracking-wider ml-1">IT</button>
+        <div class="lang-dropdown hidden absolute right-0 mt-2 bg-white/10 backdrop-blur-xl rounded-lg border border-white/20 shadow-2xl overflow-hidden z-50 min-w-[140px]">
+          <button class="lang-option block w-full px-4 py-2 text-left text-white hover:bg-white/20 transition-all" data-lang="it">🇮🇹 IT</button>
+          <button class="lang-option block w-full px-4 py-2 text-left text-white hover:bg-white/20 transition-all" data-lang="en">🇬🇧 EN</button>
+          <button class="lang-option block w-full px-4 py-2 text-left text-white hover:bg-white/20 transition-all" data-lang="es">🇪🇸 ES</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <nav class="md:hidden fixed top-4 right-4 z-50">
+    <div class="flex items-center gap-1 bg-white/5 backdrop-blur-xl rounded-full p-1 border border-white/10 shadow-2xl">
+      <a href="index.html" data-nav="/" class="p-3 rounded-full transition-all duration-300 text-white/80">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      </a>
+      <button id="mobile-menu-btn" class="p-3 rounded-full text-white/80 transition-all duration-300">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <a href="about.html" data-nav="/about" class="p-3 rounded-full transition-all duration-300 text-white/80">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </a>
+      <a href="contact.html" data-nav="/contact" class="p-3 rounded-full transition-all duration-300 text-white/80">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </a>
+      <div class="relative lang-wrapper">
+        <button class="lang-toggle lang-current px-2 py-1.5 rounded-full bg-white/10 text-white/90 hover:bg-white/20 transition-all duration-300 text-xs font-bold tracking-wider">IT</button>
+        <div class="lang-dropdown hidden absolute right-0 mt-2 bg-white/10 backdrop-blur-xl rounded-lg border border-white/20 shadow-2xl overflow-hidden z-50 min-w-[100px]">
+          <button class="lang-option block w-full px-3 py-2 text-left text-white hover:bg-white/20 transition-all text-xs" data-lang="it">🇮🇹 IT</button>
+          <button class="lang-option block w-full px-3 py-2 text-left text-white hover:bg-white/20 transition-all text-xs" data-lang="en">🇬🇧 EN</button>
+          <button class="lang-option block w-full px-3 py-2 text-left text-white hover:bg-white/20 transition-all text-xs" data-lang="es">🇪🇸 ES</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Services Dropdown (Desktop) -->
+  <div id="services-dropdown" class="hidden fixed top-16 right-4 bg-white/5 backdrop-blur-xl rounded-2xl p-2 border border-white/10 shadow-2xl z-40 animate-slide-down">
+    <div class="flex flex-col gap-1 min-w-[240px]">
+      <a href="remote-infrastructure.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-white/80 hover:bg-blue-500/20 hover:text-white transition-all border border-transparent hover:border-blue-500/30">
+        <span class="text-sm font-medium">Remote Infrastructure</span>
+      </a>
+      <a href="ai-integration.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-white/80 hover:bg-purple-500/20 hover:text-white transition-all border border-transparent hover:border-purple-500/30">
+        <span class="text-sm font-medium">AI Integration</span>
+      </a>
+      <a href="custom-software.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-white/80 hover:bg-green-500/20 hover:text-white transition-all border border-transparent hover:border-green-500/30">
+        <span class="text-sm font-medium">Custom Software</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile Full Screen Menu -->
+  <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-black/95 backdrop-blur-xl z-40 animate-fade-in">
+    <div class="flex flex-col items-center justify-center h-full gap-6 p-8">
+      <a href="remote-infrastructure.html" class="flex items-center gap-4 px-6 py-4 rounded-2xl text-white bg-blue-500/10 border border-blue-500/30 w-full max-w-sm">
+        <span class="text-lg font-medium">Remote Infrastructure</span>
+      </a>
+      <a href="ai-integration.html" class="flex items-center gap-4 px-6 py-4 rounded-2xl text-white bg-purple-500/10 border border-purple-500/30 w-full max-w-sm">
+        <span class="text-lg font-medium">AI Integration</span>
+      </a>
+      <a href="custom-software.html" class="flex items-center gap-4 px-6 py-4 rounded-2xl text-white bg-green-500/10 border border-green-500/30 w-full max-w-sm">
+        <span class="text-lg font-medium">Custom Software</span>
+      </a>
+      <button onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="mt-8 px-8 py-3 rounded-full bg-white/10 text-white border border-white/20">Close</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT: Hero Carousel -->
+  <main class="carousel-container">
+    <!-- Slide 1: Remote Working -->
+    <div class="carousel-slide active" id="slide-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-950 to-blue-900"></div>
+      <!-- Network visualization background -->
+      <div class="absolute inset-0 pointer-events-none">
+        <svg class="w-full h-full opacity-20" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <circle cx="50" cy="50" r="3" fill="#3b82f6" opacity="0.8">
+            <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="20" cy="30" r="1.5" fill="#60a5fa" opacity="0.6"/>
+          <circle cx="80" cy="25" r="1.5" fill="#60a5fa" opacity="0.6"/>
+          <circle cx="75" cy="70" r="1.5" fill="#60a5fa" opacity="0.6"/>
+          <circle cx="25" cy="75" r="1.5" fill="#60a5fa" opacity="0.6"/>
+          <circle cx="15" cy="50" r="1.5" fill="#60a5fa" opacity="0.6"/>
+          <circle cx="85" cy="50" r="1.5" fill="#60a5fa" opacity="0.6"/>
+          <line x1="50" y1="50" x2="20" y2="30" stroke="#3b82f6" stroke-width="0.3" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/></line>
+          <line x1="50" y1="50" x2="80" y2="25" stroke="#3b82f6" stroke-width="0.3" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="0.5s" repeatCount="indefinite"/></line>
+          <line x1="50" y1="50" x2="75" y2="70" stroke="#3b82f6" stroke-width="0.3" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="1s" repeatCount="indefinite"/></line>
+          <line x1="50" y1="50" x2="25" y2="75" stroke="#3b82f6" stroke-width="0.3" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="1.5s" repeatCount="indefinite"/></line>
+          <line x1="50" y1="50" x2="15" y2="50" stroke="#3b82f6" stroke-width="0.3" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="2s" repeatCount="indefinite"/></line>
+          <line x1="50" y1="50" x2="85" y2="50" stroke="#3b82f6" stroke-width="0.3" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="2.5s" repeatCount="indefinite"/></line>
+        </svg>
+      </div>
+      <div class="relative z-10 text-center max-w-3xl px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-i18n="hero.area1Title">PostProduzione Remota</h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed" data-i18n="hero.area1">La tua post-produzione inizia dal set. Lavora in team sullo stesso progetto ovunque ti trovi.</p>
+        <a href="remote-infrastructure.html" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-full text-white font-medium transition-all duration-300 hover:scale-105" data-i18n="hero.learnMore">Scopri di pi&ugrave; &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Slide 2: AI Chat -->
+    <div class="carousel-slide" id="slide-1">
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-950 via-slate-950 to-purple-900"></div>
+      <div class="absolute inset-0 pointer-events-none">
+        <svg class="w-full h-full opacity-15" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="grid-hero" width="5" height="5" patternUnits="userSpaceOnUse">
+              <path d="M 5 0 L 0 0 0 5" fill="none" stroke="rgba(168,85,247,0.15)" stroke-width="0.1"/>
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#grid-hero)"/>
+        </svg>
+      </div>
+      <div class="relative z-10 text-center max-w-3xl px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-i18n="hero.area2Title">Integrazione AI Chat2Editing</h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed" data-i18n="hero.area2">Modelli AI integrati in pipeline di post-produzione per analisi, ricerca e automazione.</p>
+        <a href="ai-integration.html" class="inline-block px-8 py-3 bg-purple-600 hover:bg-purple-500 rounded-full text-white font-medium transition-all duration-300 hover:scale-105" data-i18n="hero.learnMore">Scopri di pi&ugrave; &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Slide 3: Custom Software -->
+    <div class="carousel-slide" id="slide-2">
+      <div class="absolute inset-0 bg-gradient-to-br from-green-950 via-slate-950 to-green-900"></div>
+      <!-- Terminal-style background -->
+      <div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-15">
+        <div class="font-mono text-green-400 text-xs md:text-sm leading-loose whitespace-pre" id="terminal-bg"></div>
+      </div>
+      <div class="relative z-10 text-center max-w-3xl px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-i18n="hero.area3Title">Software Broadcast Personalizzato</h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed" data-i18n="hero.area3">Sviluppo in-house di strumenti custom per risolvere problemi reali della produzione broadcast.</p>
+        <a href="custom-software.html" class="inline-block px-8 py-3 bg-green-600 hover:bg-green-500 rounded-full text-white font-medium transition-all duration-300 hover:scale-105" data-i18n="hero.learnMore">Scopri di pi&ugrave; &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Carousel Dots -->
+    <div class="carousel-dots">
+      <button class="carousel-dot active" data-slide="0">Remote</button>
+      <button class="carousel-dot" data-slide="1">AI</button>
+      <button class="carousel-dot" data-slide="2">Software</button>
+    </div>
+  </main>
+
+  <!-- Footer (hidden on homepage - full screen carousel) -->
+
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Carousel logic
+    (function() {
+      var currentSlide = 0;
+      var totalSlides = 3;
+      var autoplayInterval;
+      var slides = document.querySelectorAll('.carousel-slide');
+      var dots = document.querySelectorAll('.carousel-dot');
+
+      function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+      }
+
+      function nextSlide() {
+        goToSlide((currentSlide + 1) % totalSlides);
+      }
+
+      function startAutoplay() {
+        autoplayInterval = setInterval(nextSlide, 4000);
+      }
+
+      function stopAutoplay() {
+        clearInterval(autoplayInterval);
+      }
+
+      dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+          stopAutoplay();
+          goToSlide(parseInt(dot.getAttribute('data-slide')));
+          startAutoplay();
+        });
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          stopAutoplay();
+          goToSlide((currentSlide + 1) % totalSlides);
+          startAutoplay();
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          stopAutoplay();
+          goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
+          startAutoplay();
+        }
+      });
+
+      // Touch/swipe support
+      var touchStartX = 0;
+      var carousel = document.querySelector('.carousel-container');
+      carousel.addEventListener('touchstart', function(e) {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      carousel.addEventListener('touchend', function(e) {
+        var diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+          stopAutoplay();
+          if (diff > 0) goToSlide((currentSlide + 1) % totalSlides);
+          else goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
+          startAutoplay();
+        }
+      }, { passive: true });
+
+      startAutoplay();
+
+      // Terminal background animation for slide 3
+      var termBg = document.getElementById('terminal-bg');
+      if (termBg) {
+        var t = window.dotting.getT().software;
+        var lines = [];
+        for (var i = 1; i <= 25; i++) {
+          if (t['term' + i]) lines.push(t['term' + i]);
+        }
+        termBg.textContent = lines.join('\n');
+      }
+
+      // Update terminal on language change
+      document.addEventListener('langchange', function(e) {
+        var sw = e.detail.t.software;
+        var lines = [];
+        for (var i = 1; i <= 25; i++) {
+          if (sw['term' + i]) lines.push(sw['term' + i]);
+        }
+        if (termBg) termBg.textContent = lines.join('\n');
+      });
+    })();
+  </script>
+</body>
+</html>
