@@ -1,12 +1,15 @@
 const translations = {
   en: {
     hero: {
-      area1Title: "Remote PostProduction",
-      area1: "Your post-production starts on set. Work in teams on the same project from anywhere. Expand your local network with our remote network. Safe, reliable and fast.",
-      area2Title: "AI Integration Chat2Editing",
-      area2: "AI models integrated into post-production pipelines for analysis, research, and automation on large-scale footage.",
-      area3Title: "Custom Broadcast Software",
-      area3: "In-house development of custom tools to solve real broadcast production problems: workflow automation, pipeline management, quality control, and monitoring.",
+      area1Title: "New from Dotting: WrittaShot",
+      area1: "From screenplay to storyboard in one app. Write, plan shots, manage characters and locations, export PDF storyboards and animatics. One tool instead of five. Made for filmmakers who ship.",
+      area1Cta: "Watch tutorial \u2192",
+      area2Title: "Remote PostProduction",
+      area2: "Your post-production starts on set. Work in teams on the same project from anywhere. Expand your local network with our remote network. Safe, reliable and fast.",
+      area3Title: "AI Integration Chat2Editing",
+      area3: "AI models integrated into post-production pipelines for analysis, research, and automation on large-scale footage.",
+      area4Title: "Custom Broadcast Software",
+      area4: "In-house development of custom tools to solve real broadcast production problems: workflow automation, pipeline management, quality control, and monitoring.",
       learnMore: "Learn more \u2192"
     },
     about: {
@@ -227,12 +230,15 @@ const translations = {
   },
   it: {
     hero: {
-      area1Title: "PostProduzione Remota",
-      area1: "La tua post-produzione inizia dal set. Lavora in team sullo stesso progetto ovunque ti trovi. Espandi la tua rete locale con la nostra rete remota. Sicura, affidabile e veloce.",
-      area2Title: "Integrazione AI Chat2Editing",
-      area2: "Modelli AI integrati in pipeline di post-produzione per analisi, ricerca e automazione su footage di grandi dimensioni.",
-      area3Title: "Software Broadcast Personalizzato",
-      area3: "Sviluppo in-house di strumenti custom per risolvere problemi reali della produzione broadcast: automazione workflow, gestione pipeline, quality control e monitoring.",
+      area1Title: "Novit\u00e0 da Dotting: WrittaShot",
+      area1: "Dalla sceneggiatura allo storyboard in un'unica app. Scrivi, pianifica le inquadrature, gestisci personaggi e location, esporta storyboard PDF e animatic. Uno strumento al posto di cinque. Fatto per chi produce davvero.",
+      area1Cta: "Guarda il tutorial \u2192",
+      area2Title: "PostProduzione Remota",
+      area2: "La tua post-produzione inizia dal set. Lavora in team sullo stesso progetto ovunque ti trovi. Espandi la tua rete locale con la nostra rete remota. Sicura, affidabile e veloce.",
+      area3Title: "Integrazione AI Chat2Editing",
+      area3: "Modelli AI integrati in pipeline di post-produzione per analisi, ricerca e automazione su footage di grandi dimensioni.",
+      area4Title: "Software Broadcast Personalizzato",
+      area4: "Sviluppo in-house di strumenti custom per risolvere problemi reali della produzione broadcast: automazione workflow, gestione pipeline, quality control e monitoring.",
       learnMore: "Scopri di pi\u00f9 \u2192"
     },
     about: {
@@ -453,12 +459,15 @@ const translations = {
   },
   es: {
     hero: {
-      area1Title: "Postproducci\u00f3n Remota",
-      area1: "Tu postproducci\u00f3n comienza en el set. Trabaja en equipo en el mismo proyecto desde cualquier lugar. Expande tu red local con nuestra red remota. Segura, confiable y r\u00e1pida.",
-      area2Title: "Integraci\u00f3n de IA Chat2Editing",
-      area2: "Modelos de IA integrados en pipelines de postproducci\u00f3n para an\u00e1lisis, investigaci\u00f3n y automatizaci\u00f3n en material de gran escala.",
-      area3Title: "Software Broadcast Personalizado",
-      area3: "Desarrollo interno de herramientas personalizadas para resolver problemas reales de producci\u00f3n broadcast: automatizaci\u00f3n de flujos de trabajo, gesti\u00f3n de pipelines, control de calidad y monitoreo.",
+      area1Title: "Novedad de Dotting: WrittaShot",
+      area1: "Del gui\u00f3n al storyboard en una sola app. Escribe, planifica planos, gestiona personajes y locaciones, exporta storyboards PDF y animatics. Una herramienta en lugar de cinco. Hecho para cineastas que producen.",
+      area1Cta: "Ver tutorial \u2192",
+      area2Title: "Postproducci\u00f3n Remota",
+      area2: "Tu postproducci\u00f3n comienza en el set. Trabaja en equipo en el mismo proyecto desde cualquier lugar. Expande tu red local con nuestra red remota. Segura, confiable y r\u00e1pida.",
+      area3Title: "Integraci\u00f3n de IA Chat2Editing",
+      area3: "Modelos de IA integrados en pipelines de postproducci\u00f3n para an\u00e1lisis, investigaci\u00f3n y automatizaci\u00f3n en material de gran escala.",
+      area4Title: "Software Broadcast Personalizado",
+      area4: "Desarrollo interno de herramientas personalizadas para resolver problemas reales de producci\u00f3n broadcast: automatizaci\u00f3n de flujos de trabajo, gesti\u00f3n de pipelines, control de calidad y monitoreo.",
       learnMore: "M\u00e1s informaci\u00f3n \u2192"
     },
     about: {

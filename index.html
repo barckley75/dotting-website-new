@@ -108,21 +108,34 @@
 
   <!-- MAIN CONTENT: Hero Carousel -->
   <main class="carousel-container">
-    <!-- Slide 1: Remote Working -->
+    <!-- Slide 1: WrittaShot -->
     <div class="carousel-slide active" id="slide-0">
+      <div class="absolute inset-0 bg-black"></div>
+      <!-- Local promo video as background -->
+      <div class="absolute inset-0 overflow-hidden">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+          <source src="videos/writtashot-promo.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="relative z-10 text-center max-w-3xl px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-i18n="hero.area1Title">Novit&agrave; da Dotting: WrittaShot</h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed" data-i18n="hero.area1">Dalla sceneggiatura allo storyboard in un'unica app. Uno strumento al posto di cinque. Fatto per chi produce davvero.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://writtashot.com" target="_blank" class="inline-block px-8 py-3 bg-amber-600 hover:bg-amber-500 rounded-full text-white font-medium transition-all duration-300 hover:scale-105">writtashot.com</a>
+          <a href="https://www.youtube.com/watch?v=3w2-Jt9SE5w" target="_blank" class="inline-block px-8 py-3 bg-white/10 hover:bg-white/20 rounded-full text-white font-medium transition-all duration-300 hover:scale-105 border border-white/20" data-i18n="hero.area1Cta">Guarda il tutorial &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Remote Working -->
+    <div class="carousel-slide" id="slide-1">
       <div class="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-950 to-blue-900"></div>
-      <!-- Network visualization background -->
       <div class="absolute inset-0 pointer-events-none">
         <svg class="w-full h-full opacity-20" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-          <circle cx="50" cy="50" r="3" fill="#3b82f6" opacity="0.8">
-            <animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite"/>
-          </circle>
-          <circle cx="20" cy="30" r="1.5" fill="#60a5fa" opacity="0.6"/>
-          <circle cx="80" cy="25" r="1.5" fill="#60a5fa" opacity="0.6"/>
-          <circle cx="75" cy="70" r="1.5" fill="#60a5fa" opacity="0.6"/>
-          <circle cx="25" cy="75" r="1.5" fill="#60a5fa" opacity="0.6"/>
-          <circle cx="15" cy="50" r="1.5" fill="#60a5fa" opacity="0.6"/>
-          <circle cx="85" cy="50" r="1.5" fill="#60a5fa" opacity="0.6"/>
+          <circle cx="50" cy="50" r="3" fill="#3b82f6" opacity="0.8"><animate attributeName="r" values="3;4;3" dur="2s" repeatCount="indefinite"/></circle>
+          <circle cx="20" cy="30" r="1.5" fill="#60a5fa" opacity="0.6"/><circle cx="80" cy="25" r="1.5" fill="#60a5fa" opacity="0.6"/>
+          <circle cx="75" cy="70" r="1.5" fill="#60a5fa" opacity="0.6"/><circle cx="25" cy="75" r="1.5" fill="#60a5fa" opacity="0.6"/>
+          <circle cx="15" cy="50" r="1.5" fill="#60a5fa" opacity="0.6"/><circle cx="85" cy="50" r="1.5" fill="#60a5fa" opacity="0.6"/>
           <line x1="50" y1="50" x2="20" y2="30" stroke="#3b82f6" stroke-width="0.3" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/></line>
           <line x1="50" y1="50" x2="80" y2="25" stroke="#3b82f6" stroke-width="0.3" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="0.5s" repeatCount="indefinite"/></line>
           <line x1="50" y1="50" x2="75" y2="70" stroke="#3b82f6" stroke-width="0.3" opacity="0.4"><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="1s" repeatCount="indefinite"/></line>
@@ -132,51 +145,47 @@
         </svg>
       </div>
       <div class="relative z-10 text-center max-w-3xl px-6">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-i18n="hero.area1Title">PostProduzione Remota</h1>
-        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed" data-i18n="hero.area1">La tua post-produzione inizia dal set. Lavora in team sullo stesso progetto ovunque ti trovi.</p>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-i18n="hero.area2Title">PostProduzione Remota</h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed" data-i18n="hero.area2">La tua post-produzione inizia dal set. Lavora in team sullo stesso progetto ovunque ti trovi.</p>
         <a href="remote-infrastructure.html" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-full text-white font-medium transition-all duration-300 hover:scale-105" data-i18n="hero.learnMore">Scopri di pi&ugrave; &rarr;</a>
       </div>
     </div>
 
-    <!-- Slide 2: AI Chat -->
-    <div class="carousel-slide" id="slide-1">
+    <!-- Slide 3: AI Chat -->
+    <div class="carousel-slide" id="slide-2">
       <div class="absolute inset-0 bg-gradient-to-br from-purple-950 via-slate-950 to-purple-900"></div>
       <div class="absolute inset-0 pointer-events-none">
         <svg class="w-full h-full opacity-15" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <pattern id="grid-hero" width="5" height="5" patternUnits="userSpaceOnUse">
-              <path d="M 5 0 L 0 0 0 5" fill="none" stroke="rgba(168,85,247,0.15)" stroke-width="0.1"/>
-            </pattern>
-          </defs>
+          <defs><pattern id="grid-hero" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M 5 0 L 0 0 0 5" fill="none" stroke="rgba(168,85,247,0.15)" stroke-width="0.1"/></pattern></defs>
           <rect width="100" height="100" fill="url(#grid-hero)"/>
         </svg>
       </div>
       <div class="relative z-10 text-center max-w-3xl px-6">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-i18n="hero.area2Title">Integrazione AI Chat2Editing</h1>
-        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed" data-i18n="hero.area2">Modelli AI integrati in pipeline di post-produzione per analisi, ricerca e automazione.</p>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-i18n="hero.area3Title">Integrazione AI Chat2Editing</h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed" data-i18n="hero.area3">Modelli AI integrati in pipeline di post-produzione per analisi, ricerca e automazione.</p>
         <a href="ai-integration.html" class="inline-block px-8 py-3 bg-purple-600 hover:bg-purple-500 rounded-full text-white font-medium transition-all duration-300 hover:scale-105" data-i18n="hero.learnMore">Scopri di pi&ugrave; &rarr;</a>
       </div>
     </div>
 
-    <!-- Slide 3: Custom Software -->
-    <div class="carousel-slide" id="slide-2">
+    <!-- Slide 4: Custom Software -->
+    <div class="carousel-slide" id="slide-3">
       <div class="absolute inset-0 bg-gradient-to-br from-green-950 via-slate-950 to-green-900"></div>
-      <!-- Terminal-style background -->
       <div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-15">
         <div class="font-mono text-green-400 text-xs md:text-sm leading-loose whitespace-pre" id="terminal-bg"></div>
       </div>
       <div class="relative z-10 text-center max-w-3xl px-6">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-i18n="hero.area3Title">Software Broadcast Personalizzato</h1>
-        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed" data-i18n="hero.area3">Sviluppo in-house di strumenti custom per risolvere problemi reali della produzione broadcast.</p>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white" data-i18n="hero.area4Title">Software Broadcast Personalizzato</h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed" data-i18n="hero.area4">Sviluppo in-house di strumenti custom per risolvere problemi reali della produzione broadcast.</p>
         <a href="custom-software.html" class="inline-block px-8 py-3 bg-green-600 hover:bg-green-500 rounded-full text-white font-medium transition-all duration-300 hover:scale-105" data-i18n="hero.learnMore">Scopri di pi&ugrave; &rarr;</a>
       </div>
     </div>
 
     <!-- Carousel Dots -->
     <div class="carousel-dots">
-      <button class="carousel-dot active" data-slide="0">Remote</button>
-      <button class="carousel-dot" data-slide="1">AI</button>
-      <button class="carousel-dot" data-slide="2">Software</button>
+      <button class="carousel-dot active" data-slide="0">WrittaShot</button>
+      <button class="carousel-dot" data-slide="1">Remote</button>
+      <button class="carousel-dot" data-slide="2">AI</button>
+      <button class="carousel-dot" data-slide="3">Software</button>
     </div>
   </main>
 
@@ -188,7 +197,7 @@
     // Carousel logic
     (function() {
       var currentSlide = 0;
-      var totalSlides = 3;
+      var totalSlides = 4;
       var autoplayInterval;
       var slides = document.querySelectorAll('.carousel-slide');
       var dots = document.querySelectorAll('.carousel-dot');
